@@ -17,7 +17,6 @@ import { supportLang } from "@/src/utils/utils";
 import { fetcher } from "@/src/utils/fetcher";
 import toast from "react-hot-toast";
 import TopicSelect from "../topic-select/TopicSelect";
-import CodeEditorComponent from "../code-editor/CodeEditor";
 
 import Markdown from "../markdown/Markdown";
 
