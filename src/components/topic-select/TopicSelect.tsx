@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import React, { Suspense } from "react";
 
 function TopicSelect({
-  topics,
+  topics = [],
   onChange,
   value,
   ...params
@@ -30,14 +30,14 @@ function TopicSelect({
           name="topic"
           {...params}
           value={value}
-          defaultValue={search.get("topic") ?? topics?.[0]._id}
+          defaultValue={search.get("topic") ?? topics?.[0]?._id}
           // @ts-ignore
           onChange={(_, e: string) =>
             onChange ? onChange(e) : serverOnChange(e)
           }
         >
           {topics.map((topic) => (
-            <Option key={topic._id} value={topic._id}>
+            <Option key={topic?._id} value={topic?._id}>
               {topic.name}
             </Option>
           ))}
