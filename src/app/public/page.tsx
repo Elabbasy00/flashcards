@@ -5,7 +5,7 @@ import React from "react";
 import CardRender from "@/src/components/card-render/CardRender";
 import TopicSelect from "@/src/components/topic-select/TopicSelect";
 
-export const revalidate = 1;
+export const revalidate = 60;
 
 async function getPublic(topic: string | string[] | undefined) {
   const filter: any = { private: false };

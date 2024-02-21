@@ -1,7 +1,6 @@
 import RequireAuth from "@/src/components/RequireAuth/RequireAuth";
 import CardRender from "@/src/components/card-render/CardRender";
-import FlashCard from "@/src/components/flash-card/FlashCard";
-import LoadingCards from "@/src/components/loading/LoadingCards";
+
 import { getAllCards } from "@/src/lib/mongo_db";
 import { authOptions } from "@/src/server/auth";
 import { Container, Grid } from "@mui/joy";

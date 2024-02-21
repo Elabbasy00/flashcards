@@ -7,7 +7,7 @@ import Link from "next/link";
 
 import React from "react";
 
-export const revalidate = 1;
+export const revalidate = 60;
 
 async function getTopics() {
   const topics = await getAllTopics({});

@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { Card } from "../models/Cards";
 import { Topic } from "../models/Topic";
 import { User } from "../models/User";
@@ -9,6 +10,8 @@ export const createCard = async (newCard: CardType) => {
   await connectToDB();
   let card = await Card.create(newCard);
   card = await card.populate(["topic", "user"]);
+  revalidatePath("/public-cards");
+  revalidatePath("/own-cards");
   return card;
 };
 
@@ -37,6 +40,9 @@ export const getAllCards = async (filters: {}) => {
 
 export const createTopic = async (newTopic: TopicType) => {
   await connectToDB();
+  revalidatePath("/");
+  revalidatePath("/public-cards");
+  revalidatePath("/create");
   return Topic.create(newTopic);
 };
 

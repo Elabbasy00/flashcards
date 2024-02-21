@@ -64,6 +64,7 @@ function CardForm({ topics = [] }: { topics: TopicType[] }) {
       <Grid container spacing={2}>
         <Grid xs={12} sm={6}>
           <TopicSelect
+            value={card.topic}
             topics={topics}
             onChange={(e: string) => setCard({ ...card, topic: e })}
           />
