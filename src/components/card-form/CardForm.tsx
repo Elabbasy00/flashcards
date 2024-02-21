@@ -16,7 +16,7 @@ import { TopicType } from "@/src/types/data-types";
 import { supportLang } from "@/src/utils/utils";
 import { fetcher } from "@/src/utils/fetcher";
 import toast from "react-hot-toast";
-// import TopicSelect from "../topic-select/TopicSelect";
+import TopicSelect from "../topic-select/TopicSelect";
 
 import Markdown from "../markdown/Markdown";
 
@@ -63,10 +63,10 @@ function CardForm({ topics = [] }: { topics: TopicType[] }) {
     <Box component="form" onSubmit={handelSubmit}>
       <Grid container spacing={2}>
         <Grid xs={12} sm={6}>
-          {/* <TopicSelect
+          <TopicSelect
             topics={topics}
             onChange={(e: string) => setCard({ ...card, topic: e })}
-          /> */}
+          />
         </Grid>
         <Grid xs={12} sm={6}>
           <FormControl>
