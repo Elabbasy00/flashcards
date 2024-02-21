@@ -28,8 +28,6 @@ import { authOptions } from "@/src/server/auth";
 
 // export { handler as GET, handler as POST };
 
-export const revalidate = 10;
-
 export async function POST(req: Request) {
   const session = await getServerSession(authOptions);
   try {
