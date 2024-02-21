@@ -11,6 +11,7 @@ import Footer from "../components/footer/Footer";
 import { Toaster } from "react-hot-toast";
 import { Sheet } from "@mui/joy";
 import { Suspense } from "react";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <NextTopLoader showSpinner={false} easing="linear" />
         <Providers>
           <ThemeRegistry>
             <Suspense>
