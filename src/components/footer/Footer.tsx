@@ -21,7 +21,7 @@ function Footer() {
         style={{ fontSize: "1em" }}
         text="Made With ☕️☕️☕️ by Ahmed Elabbasy"
       />
-      <a href="https://github.com">
+      <a href="https://github.com/Elabbasy00/flashcards" target="_blank">
         <SvgIcon
           xmlns="http://www.w3.org/2000/svg"
           width="20"

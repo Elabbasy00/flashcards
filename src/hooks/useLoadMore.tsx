@@ -28,7 +28,7 @@ export const useLoadMore = (
     if (!more.length) return;
 
     setIsLoading(true);
-    const lastid = more[more.length - 1]._id;
+    const lastid = more[more.length - 1]?._id;
     const response = await fetcher(
       `api/card?lastid=${lastid}&private=${isPrivate}&${search}`
     );

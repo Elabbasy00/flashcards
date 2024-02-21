@@ -18,7 +18,7 @@ export default function TopicCard({ topic }: { topic: TopicType }) {
         </CardContent>
       </CardContent>
       <CardActions buttonFlex="0 auto 0">
-        <Link href={`/public?topic=${topic._id}`}>
+        <Link href={`/public?topic=${topic?._id}`}>
           <Button color="primary" variant="soft" size="sm">
             Show Cards
           </Button>
