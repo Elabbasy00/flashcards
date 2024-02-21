@@ -10,6 +10,7 @@ import Footer from "../components/footer/Footer";
 
 import { Toaster } from "react-hot-toast";
 import { Sheet } from "@mui/joy";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,10 +29,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <ThemeRegistry>
-            <Toaster position="top-center" />
-            <Navbar />
-            <Sheet sx={{ py: 10, minHeight: "80vh" }}>{children}</Sheet>
-            <Footer />
+            <Suspense>
+              <Toaster position="top-center" />
+              <Navbar />
+              <Sheet sx={{ py: 10, minHeight: "80vh" }}>{children}</Sheet>
+              <Footer />
+            </Suspense>
           </ThemeRegistry>
         </Providers>
       </body>
