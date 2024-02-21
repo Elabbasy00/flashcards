@@ -5,6 +5,8 @@ import React from "react";
 import CardRender from "@/src/components/card-render/CardRender";
 import TopicSelect from "@/src/components/topic-select/TopicSelect";
 
+export const revalidate = 1;
+
 async function getPublic(topic: string | string[] | undefined) {
   const filter: any = { private: false };
   if (topic && topic !== "null") filter["topic"] = topic;
@@ -18,8 +20,6 @@ async function getTopics() {
   const topics = await getAllTopics({});
   return topics;
 }
-
-export const revalidate = 1;
 
 async function Page({
   params,

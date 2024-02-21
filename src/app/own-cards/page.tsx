@@ -18,9 +18,7 @@ async function Page() {
   const cards = await getCards(session?.user?.userId);
   return (
     <Container>
-      <Grid container spacing={2}>
-        <CardRender cards={JSON.parse(JSON.stringify(cards))} />
-      </Grid>
+      <CardRender cards={JSON.parse(JSON.stringify(cards))} />
     </Container>
   );
 }

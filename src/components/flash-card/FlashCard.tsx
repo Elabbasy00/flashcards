@@ -14,7 +14,7 @@ function FlashCard({ card }: { card?: CardType }) {
   return (
     <Card
       sx={{
-        maxWidth: "100%",
+        width: "100%",
         boxShadow: "lg",
       }}
     >
