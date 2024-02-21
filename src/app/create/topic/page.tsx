@@ -18,6 +18,7 @@ function page() {
     }
     redirect("/create");
   };
+
   return (
     <Container>
       <TopicForm handelSubmit={handelSubmit} />

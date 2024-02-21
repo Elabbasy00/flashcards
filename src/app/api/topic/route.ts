@@ -6,6 +6,8 @@ import { getServerSession } from "next-auth";
 import { NextResponse, NextRequest } from "next/server";
 // import { authOptions } from "@/src/server/auth";
 
+export const revalidate = 10;
+
 export async function POST(req: Request, res: NextResponse) {
   const session = await getServerSession(authOptions);
   try {

@@ -19,6 +19,8 @@ async function getTopics() {
   return topics;
 }
 
+export const revalidate = 1;
+
 async function Page({
   params,
   searchParams,
