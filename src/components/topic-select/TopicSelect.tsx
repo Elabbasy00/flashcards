@@ -20,6 +20,7 @@ function TopicSelect({
   const serverOnChange = (e: string) => {
     router.push(`?topic=${e}`);
   };
+
   return (
     <Suspense fallback={<Skeleton variant="text" level="h2" />}>
       <FormControl>
