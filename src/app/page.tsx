@@ -7,6 +7,9 @@ async function getTopics() {
   const topics = await getAllTopics({});
   return topics;
 }
+
+export const revalidate = 1;
+
 export default async function Home() {
   const topics = await getTopics();
   return (

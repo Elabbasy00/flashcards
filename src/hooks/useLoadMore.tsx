@@ -30,7 +30,10 @@ export const useLoadMore = (
     setIsLoading(true);
     const lastid = more[more.length - 1]?._id;
     const response = await fetcher(
-      `api/card?lastid=${lastid}&private=${isPrivate}&${search}`
+      `api/card?lastid=${lastid}&private=${isPrivate}&${search}`,
+      {
+        catch: "no-cache",
+      }
     );
     if (response.ok) {
       const data = await response.json();
